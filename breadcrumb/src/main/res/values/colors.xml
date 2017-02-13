@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="crumb_active">#fff</color>
+    <color name="crumb_inactive">#73ffffff</color>
+    <color name="md_grey_700">#616161</color>
+    <color name="md_grey_400">#CDCDCD</color>
+</resources>

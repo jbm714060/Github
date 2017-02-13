@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    app:contentPaddingLeft="@dimen/dimen_10"
+    app:contentPaddingRight="@dimen/dimen_10"
+    app:cardBackgroundColor="@color/primary"
+    android:layout_gravity="center_vertical"
+    app:cardElevation="0dp"
+    tools:context=".ui.module.main.UserDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/fo_info"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/fo_info_avatar"
+                android:layout_width="@dimen/dimen_60"
+                android:layout_height="@dimen/dimen_60"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"
+                tools:src="@drawable/ic_github"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_5">
+
+                <TextView
+                    android:id="@+id/fo_info_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_30"
+                    android:textSize="@dimen/text_size_18"
+                    android:textColor="@color/md_white_1000"
+                    android:gravity="center_vertical"
+                    tools:text="jbm758599"/>
+
+                <TextView
+                    android:id="@+id/fo_info_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/md_white_1000"
+                    android:gravity="center_vertical"
+                    tools:text="蒋柏铭"/>
+
+                <TextView
+                    android:id="@+id/fo_info_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/md_white_1000"
+                    android:maxLines="1"
+                    tools:text="aaaa风蛋"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fo_info_company_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dimen_2"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/white"
+                android:text="{gmi_accounts_alt}"/>
+
+            <TextView
+                android:id="@+id/fo_info_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_12"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="not set"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fo_info_location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dimen_2"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/white"
+                android:text="{oct_location}"/>
+
+            <TextView
+                android:id="@+id/fo_info_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_12"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:textColor="@color/white"
+                android:maxLines="1"
+                android:text="not set"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fo_info_blog_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dimen_2"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/white"
+                android:text="{oct_link}"/>
+
+            <TextView
+                android:id="@+id/fo_info_blog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12"
+                android:text="not set"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fo_info_email_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fo_info_email_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14"
+                android:text="{oct_mail}"/>
+            <TextView
+                android:id="@+id/fo_info_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:maxLines="1"
+                android:text="not set"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fo_info_join_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fo_info_join_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14"
+                android:text="{oct_clock}"/>
+            <TextView
+                android:id="@+id/fo_info_join"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:maxLines="1"
+                android:text="not set"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_30"
+            android:gravity="center_vertical"
+            android:text="Organizations"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fo_info_orglist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,104 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bmj.greader">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- ali yun push -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+
+    <application
+        android:name="com.bmj.greader.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_github"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.bmj.greader.ui.module.main.LogoSplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.bmj.greader.ui.module.main.IntroduceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <activity android:name="com.bmj.greader.ui.module.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DarkToolBar"/>
+
+        <activity android:name="com.bmj.greader.ui.module.account.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+
+        <activity android:name="com.bmj.greader.ui.module.repo.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme.Light.DarkToolbar">
+        </activity>
+
+        <activity android:name="com.bmj.greader.ui.module.repo.RepoListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.bmj.greader.ui.module.repo.RepoDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DarkToolBar.Transparent">
+        </activity>
+        <activity android:name="com.bmj.greader.ui.module.repo.ReadmeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.bmj.greader.ui.module.repo.RepoTreeActivity"
+            android:theme="@style/NoActionBar"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.bmj.greader.ui.module.repo.CodeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="com.bmj.greader.ui.module.account.UserActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.bmj.greader.ui.module.main.UserDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DarkToolBar.Transparent">
+        </activity>
+        <activity android:name="com.bmj.greader.ui.module.repo.UserListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.bmj.greader.ui.module.repo.RepoIssueActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="com.bmj.greader.ui.module.setting.SettingsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.bmj.greader.ui.module.setting.AboutActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <service android:name="com.bmj.greader.compz.service.InitializeService">
+        </service>
+    </application>
+
+</manifest>

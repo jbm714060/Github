@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/popup_bg">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/rup_card"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_25"
+        app:contentPadding="@dimen/dimen_5"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="@dimen/dimen_3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/rup_label_homepage"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_30"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/md_grey_700"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:text="homepage:"/>
+
+            <TextView
+                android:id="@+id/rup_homepage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_14"
+                android:autoLink="web"
+                android:layout_marginStart="@dimen/dimen_5"
+                tools:text="aaaaaaaaa"/>
+
+            <TextView
+                android:id="@+id/rup_label_repo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_30"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/md_grey_700"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:text="repo_url:"/>
+
+            <TextView
+                android:id="@+id/rup_repo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_14"
+                android:autoLink="web"
+                android:layout_marginStart="@dimen/dimen_5"
+                tools:text="aaaaaaaaa"/>
+
+            <TextView
+                android:id="@+id/rup_label_clone"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_30"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/md_grey_700"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:text="clone_url:"/>
+
+            <TextView
+                android:id="@+id/rup_clone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/dimen_5"
+                tools:text="aaaaaaaaa"/>
+
+            <TextView
+                android:id="@+id/rup_label_svn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_30"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/md_grey_700"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:text="svn_url:"/>
+
+            <TextView
+                android:id="@+id/rup_svn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:layout_marginBottom="@dimen/dimen_10"
+                tools:text="aaaaaaaaa"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

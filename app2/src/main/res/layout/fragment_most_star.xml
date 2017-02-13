@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/repo_list"
+            android:divider="#ffff0000"
+            android:dividerHeight="10dp"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/dimen_57"
+        android:layout_marginEnd="@dimen/dimen_10"
+        app:menu_showShadow="true"
+        app:menu_fab_size="normal"
+        app:menu_icon="@drawable/ic_fab_menu_white"
+        app:menu_colorNormal="@color/md_blue_400"
+        app:menu_colorPressed="@color/md_blue_600"
+        app:menu_colorRipple="@color/md_green_700"
+        app:fab_elevationCompat="2dp">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/repo_ios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="iOS"
+            android:src="@drawable/ic_fab_edit_white"
+            app:fab_size="mini"
+            app:fab_colorNormal="@color/md_blue_400"
+            app:fab_colorPressed="@color/md_blue_600"
+            app:fab_colorRipple="@color/md_green_700"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/repo_web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Web"
+            android:src="@drawable/ic_fab_edit_white"
+            app:fab_size="mini"
+            app:fab_colorNormal="@color/md_blue_400"
+            app:fab_colorPressed="@color/md_blue_600"
+            app:fab_colorRipple="@color/md_green_700"/>
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/repo_php"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="PHP"
+            android:src="@drawable/ic_fab_edit_white"
+            app:fab_size="mini"
+            app:fab_colorNormal="@color/md_blue_400"
+            app:fab_colorPressed="@color/md_blue_600"
+            app:fab_colorRipple="@color/md_green_700"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/repo_python"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Python"
+            android:src="@drawable/ic_fab_edit_white"
+            app:fab_size="mini"
+            app:fab_colorNormal="@color/md_blue_400"
+            app:fab_colorPressed="@color/md_blue_600"
+            app:fab_colorRipple="@color/md_green_700"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/repo_android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Android"
+            android:src="@drawable/ic_fab_edit_white"
+            app:fab_size="mini"
+            app:fab_colorNormal="@color/md_blue_400"
+            app:fab_colorPressed="@color/md_blue_600"
+            app:fab_colorRipple="@color/md_green_700"/>
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

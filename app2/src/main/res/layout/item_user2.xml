@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_bg2"
+    android:layout_marginTop="@dimen/dimen_5"
+    android:layout_marginBottom="@dimen/dimen_5"
+    android:padding="@dimen/dimen_10">
+
+    <ImageView
+        android:id="@+id/iu2_avatar"
+        android:layout_width="@dimen/dimen_80"
+        android:layout_height="@dimen/dimen_80"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:src="@drawable/ic_github"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dimen_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_30"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/ir2_userlogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_18"
+                android:maxLines="1"
+                android:textColor="@color/md_black_1000"
+                tools:text="jbm758599"/>
+
+            <TextView
+                android:id="@+id/ir2_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_12"
+                android:maxLines="1"
+                android:text="@string/username"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/iu2_follow_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/text_size_12"
+                    android:background="@drawable/button_bg"
+                    android:elevation="0dp"
+                    android:text="Follow"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ir2_bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_12"
+            tools:text="bio"/>
+
+        <LinearLayout
+            android:id="@+id/ir2_info"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_30">
+
+            <TextView
+                android:id="@+id/fo_info_company_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_size_12"
+                android:text="{gmi_accounts_alt} " />
+            <TextView
+                android:id="@+id/fo_info_company"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textSize="@dimen/text_size_12"
+                android:text="not set"
+                android:layout_marginRight="@dimen/dimen_10"/>
+
+            <TextView
+                android:id="@+id/fo_info_location_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/text_size_12"
+                android:gravity="center_vertical"
+                android:text="{oct_location} "/>
+            <TextView
+                android:id="@+id/fo_info_location"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/text_size_12"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="not set"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

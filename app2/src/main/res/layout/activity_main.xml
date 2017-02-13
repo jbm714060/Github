@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.module.main.MainActivity">
+    
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45"
+            android:background="?attr/colorPrimary"
+            android:gravity="center_vertical"
+            app:contentInsetStart="@dimen/dimen_10"
+            app:contentInsetLeft="@dimen/dimen_10"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/am_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_20"
+                    android:textColor="@color/md_white_1000"
+                    android:layout_marginEnd="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_3"
+                    android:text="{oct_logo_github}"/>
+
+                <LinearLayout
+                    android:id="@+id/am_search_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_28"
+                    android:layout_weight="1"
+                    android:background="@drawable/search_button_bg"
+                    android:paddingStart="@dimen/dimen_14"
+                    android:paddingEnd="@dimen/dimen_14"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_size_12"
+                        android:textColor="@color/md_grey_400"
+                        android:layout_marginEnd="@dimen/dimen_5"
+                        android:text="{oct_search}"/>
+
+                    <TextView
+                        android:id="@+id/am_search_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_size_12"
+                        android:maxLines="1"
+                        android:text="search repositories and users"
+                        android:textColor="@color/md_grey_400"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/am_avatar"
+                    android:layout_width="@dimen/dimen_30"
+                    android:layout_height="@dimen/dimen_30"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginTop="@dimen/dimen_1"
+                    android:src="@drawable/ic_action_account_circle"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen_45" />
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_gravity="bottom"
+        app:bb_tabXmlResource="@xml/bottombar_tabs"
+        app:bb_behavior="shy"/>
+
+</android.support.design.widget.CoordinatorLayout>

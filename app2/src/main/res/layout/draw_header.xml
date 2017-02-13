@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_124"
+    android:background="@drawable/danmei"
+    android:gravity="bottom"
+    android:padding="@dimen/dimen_10"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <TextView
+        android:id="@+id/dh_reponame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_20"
+        android:textStyle="bold"
+        android:textColor="@color/md_grey_700"
+        android:text="Repo Tree"/>
+
+</LinearLayout>

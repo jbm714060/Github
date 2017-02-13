@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_10">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:maxLines="1"
+            tools:text="@string/app_name"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_18"/>
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            tools:text="@string/app_name"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/text_size_14"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/dimen_32"
+                android:layout_height="@dimen/dimen_32"
+                android:scaleType="centerInside"
+                android:visibility="visible"
+                tools:src="@mipmap/ic_launcher"/>
+            
+            <TextView
+                android:id="@+id/owner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:gravity="left|center_vertical"
+                android:textSize="@dimen/text_size_14"
+                android:maxLines="1"
+                android:textColor="@android:color/black"/>
+
+            <ImageButton
+                android:id="@+id/external_link"
+                android:layout_width="@dimen/dimen_30"
+                android:layout_height="@dimen/dimen_30"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/grey"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/update_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                tools:text="@string/app_name"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_12"/>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="@dimen/dimen_16"
+                android:background="@color/grey"/>
+
+            <LinearLayout
+                android:id="@+id/star_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/star_icon"
+                    android:layout_width="@dimen/dimen_16"
+                    android:layout_height="@dimen/dimen_16"
+                    android:scaleType="centerInside"
+                    tools:src="@drawable/ic_star"/>
+
+                <TextView
+                    android:id="@+id/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:gravity="center"
+                    tools:text="@string/app_name"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_12"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.flyco.labelview.LabelView
+        android:id="@+id/label_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        app:lv_background_color="@color/md_yellow_500"
+        app:lv_gravity="TOP_RIGHT"
+        app:lv_text="TEST"
+        app:lv_text_size="@dimen/text_size_12"/>
+
+</FrameLayout>

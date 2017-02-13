@@ -1,0 +1,196 @@
+apply plugin: 'com.android.application'
+apply plugin:'com.neenbedankt.android-apt'
+apply plugin:'android-apt'
+
+android {
+    signingConfigs {
+        bmjiang {
+            keyAlias 'baiming'
+            keyPassword '123456'
+            storeFile file('E:/AndroidWorkspace/bmjiang.jks')
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion '25.0.1'
+    defaultConfig {
+        applicationId "com.bmj.greader"
+        minSdkVersion 23
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            // 不显示Log
+            //buildConfigField "boolean", "LOG_DEBUG", "false"
+
+            minifyEnabled false
+            //zipAlignEnabled true
+            // 移除无用的resource文件
+            //shrinkResources true
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // 自定义输出配置
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为Github_v1.0_wandoujia.apk
+                        def fileName = "Github_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+        debug {
+            debuggable true
+        }
+    }
+    productFlavors {
+        kuan {}
+        xiaomi {}
+        qh360 {}
+        baidu {}
+        wandoujia {}
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+def DAGGER_VERSION = '2.5'
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile files('libs/jsoup-1.8.1.jar')
+    compile(name: 'utilcode-release', ext: 'aar')
+    compile(name:'material-ripple-release',ext:'aar')
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile "com.google.dagger:dagger:$DAGGER_VERSION"
+    apt "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+    compile 'org.glassfish:javax.annotation:10.0-b28'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:support-v4:25.0.1'
+    compile 'com.android.support:recyclerview-v7:25.0.1'
+    compile 'com.android.support:cardview-v7:25.0.1'
+    compile 'com.android.support:design:25.0.1'
+    //compile 'com.mikepenz:materialdrawer:5.7.0'
+    compile('com.mikepenz:materialdrawer:5.7.0@aar') {
+        transitive = true
+    }
+    // https://github.com/orhanobut/logger
+    compile 'com.orhanobut:logger:1.15'
+    // Bugly
+
+    // https://bugly.qq.com/docs/
+    compile 'com.tencent.bugly:crashreport:2.3.1'
+    // Glide for image loader
+
+    // https://github.com/bumptech/glide
+
+    //compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    // glide-transformations
+
+    // https://github.com/wasabeef/glide-transformations
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    // Android-Iconics
+
+    // https://github.com/mikepenz/Android-Iconics
+
+    // iconics-core already integrate by MaterialDrawer
+
+    // compile "com.mikepenz:iconics-core:2.8.1@aar"
+    compile 'com.mikepenz:devicon-typeface:2.0.0.2@aar'
+    compile 'com.mikepenz:fontawesome-typeface:4.6.0.3@aar'
+    compile 'com.mikepenz:octicons-typeface:3.2.0.2@aar'
+    compile 'com.mikepenz:material-design-iconic-typeface:2.2.0.2@aar'
+    // Retrofit for rest client
+
+    // https://github.com/square/retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    // OkHttp logging interceptor
+
+    // https://github.com/square/okhttp/wiki/Interceptors
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    // RxAndroid
+
+    // https://github.com/ReactiveX/RxAndroid
+
+    // https://github.com/ReactiveX/RxJava
+
+    // https://github.com/ReactiveX/RxJavaJoins
+    compile 'io.reactivex:rxandroid:1.2.1'
+    // Because RxAndroid releases are few and far between, it is recommended you also
+
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile project(':mvp')
+    compile project(':breadcrumb')
+    compile project(':buffertextinputlayout')
+    //https://github.com/JakeWharton/butterknife
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    // spots-dialog
+
+    // https://github.com/d-max/spots-dialog
+    compile 'com.github.d-max:spots-dialog:0.4@aar'
+    //https://github.com/paolorotolo/AppIntro
+    compile 'com.github.paolorotolo:appintro:4.1.0'
+    //https://github.com/roughike/BottomBar
+    compile 'com.roughike:bottom-bar:2.0.2'
+    // PagerSlidingTabStrip
+
+    // https://github.com/astuetz/PagerSlidingTabStrip
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    //https://github.com/Clans/FloatingActionButton
+    compile 'com.github.clans:fab:1.6.4'
+    // BaseRecyclerViewAdapterHelper
+
+    // https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.9.8'
+    // recycler view divider
+
+    // https://github.com/yqritc/RecyclerView-FlexibleDivider
+    compile 'com.yqritc:recyclerview-flexibledivider:1.4.0'
+    // FlycoLabelView
+
+    // https://github.com/H07000223/FlycoLabelView
+    compile 'com.flyco.labelview:FlycoLabelView_Lib:1.0.2@aar'
+    // Markdown View
+
+    // https://github.com/mukeshsolanki/MarkdownView-Android
+    compile 'com.github.mukeshsolanki:MarkdownView-Android:1.0.3'
+    // Code View
+
+    // https://github.com/PDDStudio/highlightjs-android
+    compile 'com.pddstudio:highlightjs-android:1.3.0'
+    // MaterialSearchView
+
+    // https://github.com/MiguelCatalan/MaterialSearchView
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
+    //https://github.com/castorflex/SmoothProgressBar
+    compile 'com.github.castorflex.smoothprogressbar:library:1.1.0'
+    compile 'com.github.castorflex.smoothprogressbar:library-circular:1.2.0'
+    //https://github.com/kakajika/RelativePopupWindow
+
+    //compile 'com.labo.kaji:relativepopupwindow:0.2.1'
+
+    //https://github.com/razerdp/BasePopup
+    compile 'com.github.razerdp:BasePopup:v1.5.1'
+    //https://github.com/avraampiperidis/Codeview
+    compile 'Codeview-1.0.0:webviewcode:1.0.0'
+    //https://github.com/Manabu-GT/ExpandableTextView
+    compile 'com.ms-square:expandableTextView:0.1.4'
+    compile 'com.android.support:percent:25.0.1'
+}

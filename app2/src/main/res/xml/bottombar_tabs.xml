@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tabs_trending"
+        icon="@drawable/ic_trending_up"
+        title="Trending"/>
+        <!--barColorWhenSelected="#5D4037"-->
+
+    <tab
+        id="@+id/tabs_most_stars"
+        icon="@drawable/ic_most_star"
+        title="Most Stars"/>
+
+    <!--<tab
+        id="@+id/tabs_account"
+        icon="@drawable/ic_account"
+        title="Profile"/>-->
+</tabs>

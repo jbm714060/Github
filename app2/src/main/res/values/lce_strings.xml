@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty_text">Nothing Here</string>
+    <string name="empty_desc">We couldn\'t find anything</string>
+    <string name="error_text">Oooops!</string>
+    <string name="error_desc">Looks like something went wrong!</string>
+    <string name="retry_btn_label">Retry</string>
+    <string name="useredit_hint">user name</string>
+</resources>

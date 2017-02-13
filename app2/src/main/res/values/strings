@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="app_name">Github</string>
+    <string name="loginActivity_title">SIGN IN</string>
+    <string name="appintro_slide1_title">Welcome,Programmer</string>
+    <string name="appintro_slide1_titlefont">CaviarDreams_Bold.ttf</string>
+    <string name="appintro_slide1_desc">Github is the programmer\'s facebook</string>
+    <string name="appintro_slide1_descfont">aller_It.ttf</string>
+    <string name="appintro_slide2_title">Here,Code is everything</string>
+    <string name="appintro_slide2_desc">Read the fucking source code.</string>
+    <string name="appintro_slide3_title">Let\'s coding</string>
+    <string name="appintro_slide3_desc">Talk is cheap,show me the code</string>
+
+    <string name="tabs_account">Profile</string>
+    <string name="tabs_most_stars">%1$s Most Stars</string>
+    <string name="tabs_trending">Trending</string>
+
+    <string name="menu_search">Search</string>
+    
+    <string name="exit_click_back_again">Press Back again to exit Application</string>
+    <string name="exit_click_back_again2">Press Back again to exit</string>
+    <string name="please_login">Please Login</string>
+
+    <string name="forks_count">( %1$d )</string>
+    <string name="contributors_count">( %1$d )</string>
+
+    <string name="search">Search</string>
+    <string name="load_searching">Searching</string>
+
+    <string name="my_following">my following</string>
+    <string name="my_followers">my followers</string>
+    <string name="following">%1$s \'s following</string>
+    <string name="followers">%1$s \'s followers</string>
+
+    <string name="my_repositories">my repositories</string>
+    <string name="my_stars">my stars</string>
+    <string name="repositories">%1$s \'s repositories</string>
+    <string name="your_stars">%1$s \'s stars</string>
+
+    <string name="night_mode">Night Mode</string>
+    <string name="clear_cache">Clear Cache</string>
+    <string name="upgrade">Check the Newest Version</string>
+    <string name="about_author">About Author</string>
+    <string name="about">About This App</string>
+    <string name="settings">Settings</string>
+
+    <string name="github_com_v3">Api from Github Document \nhttps://developer.github.com/v3/</string>
+    <string name="source_link">Source Link \n https://github.com/mingjunli/GithubApp</string>
+    <string name="no_copyright">\@copyright anly_jun</string>
+    <string name="make_it_better">Welcome to fork/star/pull request to make it better</string>
+
+    <string name="act_user_repository">( %1$d )</string>
+    <string name="act_user_followers_count">( %1$d )</string>
+    <string name="act_user_following_count">( %1$d )</string>
+
+    <string name="viewloadmore_loading">Loading...</string>
+    <string name="viewloadmore_load_failed">Load Failed</string>
+    <string name="viewloadmore_load_end">Load End</string>
+    
+    <string name="busy_carry">努力搬运中...</string>
+    <string name="carry_error">没搬到数据，请尝试下拉刷新！</string>
+    <string name="trending_no_data">Trending repositories results are currently being dissected.\nThis may be a few minutes.</string>
+    <string name="loading_repo">数据加载中...</string>
+    <string name="no_repo_loaded">Don\'t have any public repositories yet.</string>
+    <string name="no_starrepo_loaded">Don\'t have any starred repositories yet.</string>
+    <string name="no_following_loaded">Don\'t follow anybody.</string>
+    <string name="no_follower_loaded">Nobody follow.</string>
+    <string name="no_gist_loaded">Don\'t have any public gists yet.</string>
+    <string name="no_issue_loaded">Don\'t have any issues yet.</string>
+
+    <string name="fragment_repositories">{oct_repo}  public repositories</string>
+    <string name="fragment_starredrepos">{oct_star}  starred repositories</string>
+    <string name="fragment_followers">{oct_person_follow}  followers</string>
+    <string name="fragment_following">{oct_person_follow}  following</string>
+    <string name="fragment_gists">{oct_gist}  gists</string>
+
+    <string name="follow">follow</string>
+    <string name="unfollow">unfollow</string>
+    <string name="following2">following</string>
+    <string name="unfollowing">unfollowing</string>
+
+    <string name="username"> (%1$s)</string>
+
+    <string name="reply_username">%1$s: </string>
+    <string name="gist_id">Gist#%1$s</string>
+    
+    <string name="comment_input_hint">content</string>
+
+    <string name="open_issue">{oct_issue_opened} Open </string>
+    <string name="closed_issue">{oct_issue_closed} Closed </string>
+
+    <string name="transition_repodetail_title">rt_title</string>
+
+</resources>

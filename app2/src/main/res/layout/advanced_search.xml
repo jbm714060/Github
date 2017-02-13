@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/as_search_type"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/as_search_repo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/md_grey_50"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/dimen_10"
+            android:checked="true"
+            android:text="Repository"/>
+
+        <RadioButton
+            android:id="@+id/as_search_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_bg5"
+            android:layout_weight="1"
+            android:text="User"/>
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/as_search_type"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_10">
+
+        <RelativeLayout
+            android:id="@+id/repo_options_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_10">
+
+            <TextView
+                android:id="@+id/as_advanced_options"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold"
+                android:textColor="@color/md_grey_800"
+                android:gravity="center_vertical"
+                android:text="Advanced options"/>
+
+            <LinearLayout
+                android:id="@+id/as_afo_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40"
+                android:orientation="horizontal"
+                android:layout_below="@+id/as_advanced_options"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_grey_600"
+                    android:textSize="@dimen/text_size_12"
+                    android:text="From these owners"/>
+
+                <EditText
+                    android:id="@+id/as_afo_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/md_grey_400"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/md_grey_600"
+                    android:maxLines="1"
+                    android:layout_marginStart="@dimen/dimen_5"
+                    android:hint="github,joyent"/>
+
+                <ImageButton
+                    android:id="@+id/as_afo_clear"
+                    android:layout_width="@dimen/dimen_10"
+                    android:layout_height="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_2"
+                    android:layout_marginRight="@dimen/dimen_5"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_action_navigation_close"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/as_acd_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40"
+                android:orientation="horizontal"
+                android:layout_below="@+id/as_afo_layout"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_grey_600"
+                    android:textSize="@dimen/text_size_12"
+                    android:text="Created on the dates"/>
+
+                <EditText
+                    android:id="@+id/as_acd_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/md_grey_400"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/md_grey_600"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:digits="&gt;1234567890-,&lt;"
+                    android:layout_marginStart="@dimen/dimen_5"
+                    android:hint="&gt;YYYY-MM-DD,YYYY-MM-DD"/>
+
+                <ImageButton
+                    android:id="@+id/as_acd_clear"
+                    android:layout_width="@dimen/dimen_10"
+                    android:layout_height="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_2"
+                    android:layout_marginRight="@dimen/dimen_5"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_action_navigation_close"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/as_owl_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40"
+                android:orientation="horizontal"
+                android:layout_below="@+id/as_acd_layout"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_grey_600"
+                    android:textSize="@dimen/text_size_12"
+                    android:text="Written in this language"/>
+
+                <Spinner
+                    android:id="@+id/as_owl_langspinner"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_2"
+                    android:background="@drawable/button_bg5"
+                    android:entries="@array/languages"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/as_repos_options"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:textColor="@color/md_grey_800"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/as_owl_layout"
+                android:text="Repositories options"/>
+
+            <LinearLayout
+                android:id="@+id/as_rws_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40"
+                android:orientation="horizontal"
+                android:layout_below="@+id/as_repos_options"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_grey_600"
+                    android:textSize="@dimen/text_size_12"
+                    android:text="With this many stars"/>
+
+                <EditText
+                    android:id="@+id/as_rws_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/md_grey_400"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/md_grey_600"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:digits="&gt;1234567890-,&lt;"
+                    android:layout_marginStart="@dimen/dimen_5"
+                    android:hint="0..100,200,&gt;1000"/>
+
+                <ImageButton
+                    android:id="@+id/as_rws_clear"
+                    android:layout_width="@dimen/dimen_10"
+                    android:layout_height="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_2"
+                    android:layout_marginRight="@dimen/dimen_5"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_action_navigation_close"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/as_rwf_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40"
+                android:orientation="horizontal"
+                android:layout_below="@+id/as_rws_layout"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_grey_600"
+                    android:textSize="@dimen/text_size_12"
+                    android:text="With this many forks"/>
+
+                <EditText
+                    android:id="@+id/as_rwf_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/md_grey_400"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/md_grey_600"
+                    android:maxLines="1"
+                    android:digits="&gt;&lt;1234567890-,"
+                    android:inputType="number"
+                    android:layout_marginStart="@dimen/dimen_5"
+                    android:hint="50..100,200,&lt;5"/>
+
+                <ImageButton
+                    android:id="@+id/as_rwf_clear"
+                    android:layout_width="@dimen/dimen_10"
+                    android:layout_height="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_2"
+                    android:layout_marginRight="@dimen/dimen_5"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_action_navigation_close"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/as_user_options_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/as_user_options"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold"
+                android:textColor="@color/md_grey_800"
+                android:gravity="center_vertical"
+                android:text="Users options"/>
+
+            <LinearLayout
+                android:id="@+id/as_ufl_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40"
+                android:orientation="horizontal"
+                android:layout_below="@+id/as_user_options"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_grey_600"
+                    android:textSize="@dimen/text_size_12"
+                    android:text="From this location"/>
+
+                <EditText
+                    android:id="@+id/as_ufl_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/md_grey_400"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/md_grey_600"
+                    android:maxLines="1"
+                    android:layout_marginStart="@dimen/dimen_5"
+                    android:hint="San Francisco,CA,成都"/>
+
+                <ImageButton
+                    android:id="@+id/as_ufl_clear"
+                    android:layout_width="@dimen/dimen_10"
+                    android:layout_height="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_2"
+                    android:layout_marginRight="@dimen/dimen_5"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_action_navigation_close"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/as_uwf_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40"
+                android:orientation="horizontal"
+                android:layout_below="@+id/as_ufl_layout"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_grey_600"
+                    android:textSize="@dimen/text_size_12"
+                    android:text="With this many followers"/>
+
+                <EditText
+                    android:id="@+id/as_uwf_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/md_grey_400"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/md_grey_600"
+                    android:maxLines="1"
+                    android:digits="&gt;&lt;1234567890-,"
+                    android:inputType="number"
+                    android:layout_marginStart="@dimen/dimen_5"
+                    android:hint="20..50,&gt;200,&lt;2"/>
+
+                <ImageButton
+                    android:id="@+id/as_uwf_clear"
+                    android:layout_width="@dimen/dimen_10"
+                    android:layout_height="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_2"
+                    android:layout_marginRight="@dimen/dimen_5"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_action_navigation_close"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/as_uwr_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40"
+                android:orientation="horizontal"
+                android:layout_below="@+id/as_uwf_layout"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_grey_600"
+                    android:textSize="@dimen/text_size_12"
+                    android:text="With this many repos"/>
+
+                <EditText
+                    android:id="@+id/as_uwr_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/md_grey_400"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/md_grey_600"
+                    android:maxLines="1"
+                    android:digits="&gt;&lt;1234567890-,"
+                    android:inputType="number"
+                    android:layout_marginStart="@dimen/dimen_5"
+                    android:hint="0,&lt;42,&gt;5"/>
+
+                <ImageButton
+                    android:id="@+id/as_uwr_clear"
+                    android:layout_width="@dimen/dimen_10"
+                    android:layout_height="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_2"
+                    android:layout_marginRight="@dimen/dimen_5"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_action_navigation_close"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
