@@ -4,5 +4,4 @@
 
 #效果预览
 
-![](https://github.com/jbm714060/Github/blob/master/screenshot/login.png)
-![](https://github.com/jbm714060/Github/blob/master/screenshot/repo.png)
+![](https://github.com/jbm714060/Github/blob/master/screenshot/login.png)![](https://github.com/jbm714060/Github/blob/master/screenshot/repo.png)![](https://github.com/jbm714060/Github/blob/master/screenshot/repo.png)
